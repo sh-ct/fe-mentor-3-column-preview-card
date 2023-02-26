@@ -1,0 +1,165 @@
+/* CSS RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflowshsl(0, 0%, 95%)
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM PROPERTIES */
+
+:root {
+    --clr-primary-400: hsl(184, 100%, 22%);
+    --clr-primary-800: hsl(179, 100%, 13%);
+    --clr-secondary-400: hsl(31, 77%, 52%);
+
+    --clr-white-body: hsla(0, 0%, 100%, 0.75);
+    --clr-white-background: hsl(0, 0%, 95%);
+
+    --ff-titles: 'Big Shoulders Display', cursive;
+    --ff-body: 'Lexend Deca', sans-serif;
+
+    --fw-titles: 700;
+    --fw-body: 400;
+}
+
+/* BUTTONS */
+
+.card__button {
+    cursor: pointer;
+    background-color: var(--clr-white-background);
+    color: #000;
+    mix-blend-mode: screen;
+    
+    border-radius: 2em;
+    padding: 0.5em 1.5em;
+    border: 0;
+}
+
+/* ICONS */
+
+.card__icon {
+    width: 64px;
+    height: 40px;
+    background-size: cover;
+}
+
+/* GENERAL */
+
+body {
+    font-size: 0.9375em;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-body);
+
+    padding: 1.5em;
+
+    display: grid;
+    place-items: center;
+}
+
+.cardset {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 700px) {
+    .cardset {
+        flex-direction: row;
+    }
+}
+
+.card {
+    color: var(--clr-white-background);
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    max-width: 325px;
+}
+
+.card-orange {
+    background-color: var(--clr-secondary-400);
+}
+
+.card-teal-light {
+    background-color: var(--clr-primary-400);
+}
+
+.card-teal-dark {
+    background-color: var(--clr-primary-800);
+}
+
+.card__title {
+    font-family: var(--ff-titles);
+    font-weight: var(--fw-titles);
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+.card__text {
+    color: var(--clr-white-body)
+}
