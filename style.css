@@ -168,5 +168,5 @@ body {
 }
 
 .card__text {
-    color: var(--clr-white-body)
+    color: var(--clr-white-body);
 }
