@@ -98,6 +98,13 @@ h6 {
     border: 0;
 }
 
+.card__button:hover,
+.card__buttons:focus {
+    background-color: rgba(0, 0, 0, 0);
+    border: var(--clr-white-background) solid 2px;
+    color: var(--clr-white-background);
+}
+
 /* ICONS */
 
 .card__icon {
